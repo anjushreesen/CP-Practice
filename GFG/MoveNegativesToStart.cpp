@@ -19,12 +19,6 @@ void partition(int arr[], int n)
     }
 }
 
-void printArray(int arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        printf("%d ", arr[i]);
-}
-
 int main()
 {
     //code
@@ -38,7 +32,10 @@ int main()
     }
 
     partition(arr, n);
-    printArray(arr, n);
 
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << endl;
+    }
     return 0;
 }
