@@ -40,3 +40,25 @@ public:
         }
     }
 };
+
+//  0 ms solution
+class Solution
+{
+public:
+    void merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
+    {
+
+        for (int i = 0; i < nums2.size(); i++)
+            nums1.push_back(nums2[i]);
+        sort(nums1.begin(), nums1.end());
+        int count = 0;
+        for (int i = nums1.size() - 1; i >= 0; i--)
+        {
+            if (nums1[i] == 0 && count != nums2.size())
+            {
+                nums1.erase(nums1.begin() + i);
+                count++;
+            }
+        }
+    }
+};
